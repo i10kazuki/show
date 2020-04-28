@@ -7,30 +7,117 @@
 <title>ポートフォリオ</title>
 <style type="text/css">
     div#top{
-        background-image: url("img/imgcoffee.jpeg");
+        background-image : url("img/imgcoffee.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 640px;
+        position: relative;
+        margin: 0;
+        border: 0;
+        padding: 0;
         }
-        h1{font-style: italic;}
+        h1{
+            font-family: 'Sacramento', cursive;
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.966);
+            margin-left: 20px;
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            }
+        #top p{
+            color: whitesmoke;
+            font-family: serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 20px;
+        }
+    div#about{
+        background-image: url("img/imgdesk.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 640px;
+        position: relative;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        }
+    h2{
+        font-family: 'Sacramento', cursive;
+        color: whitesmoke;
+        font-size: 5rem; 
+        margin-left: 50%;
+        margin-bottom: 5;
+    }
+    #about p{
+        font-family: serif;
+        font-size: 1.5rem;
+        margin-left: 50%;
+        
+    }
+    #text1{
+        color: whitesmoke;
+        margin-left: 5%;
+    }
+    div#link{
+        background-image: url("img/imgbook.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 640px;
+        position: relative;
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+    h3{
+        font-family: 'Sacramento', cursive;
+        color: whitesmoke;
+        font-size: 5rem; 
+        margin-left: 5%;
+    }
+    #text2{
+        font-family: 'Sacramento', cursive;
+        font-size: 4rem;
+        margin-left: 35%;
+        margin-top: 5%;
+    }
+    #text3{
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        margin-left: 35%;
+        margin-top: 5%;
+    }
 </style>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="top">
     <h1>Ito Kazuki</h1>
-    <p>フォース株式会社</p>　
-    <p>インフラエンジニア</p>
+    <p>フォース株式会社　
+    <br>インフラエンジニア</p>
     </div>
     <div id="about">
     <h2>about</h2>
-    <p>伊藤　香月</p>
-    <p>令和2年</p>
-    <p>帝京科学大学生命環境学部</p>
-    <p>生命科学科　卒業</p>
-    <p>フォース株式会社　入社</p>
-    <p>インフラ整備を中心に活動中</p>
+    <p>伊藤　香月
+    <br>令和2年
+    <br>帝京科学大学生命環境学部
+    <br>生命科学科　卒業
+    <br>フォース株式会社　入社</p>
+    <p id="text1">インフラ整備を中心に活動中</p>
     </div>
     <div id="link">
         <h3>link</h3>
-        <p>work</p>
-        <p>E-mail</p>
+        <p id="text2">work</p>
+        <p id="text3">E-mail</p>
     </div>
 
 </body>
