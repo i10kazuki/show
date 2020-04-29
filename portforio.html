@@ -60,11 +60,14 @@
         font-family: serif;
         font-size: 1.5rem;
         margin-left: 50%;
-        
-    }
-    #text1{
+        }
+    div.text1{
+        display: inline-block;
+        font-family: serif;
+        font-size: 2rem;
         color: whitesmoke;
         margin-left: 5%;
+        margin-top: 130px;
     }
     div#link{
         background-image: url("img/imgbook.jpeg");
@@ -84,17 +87,20 @@
         font-size: 5rem; 
         margin-left: 5%;
     }
-    #text2{
-        font-family: 'Sacramento', cursive;
-        font-size: 4rem;
-        margin-left: 35%;
-        margin-top: 5%;
-    }
-    #text3{
+    div.text2{
+        display: inline-block;
         font-family: 'Sacramento', cursive;
         font-size: 3rem;
         margin-left: 35%;
-        margin-top: 5%;
+        margin-top: 0;
+    }
+    div.text3{
+        display: inline-block;
+        font-family: 'Sacramento', cursive;
+        font-size: 3rem;
+        margin-left: 35%;
+        padding: 0;
+        margin: 0;
     }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
@@ -112,12 +118,12 @@
     <br>帝京科学大学生命環境学部
     <br>生命科学科　卒業
     <br>フォース株式会社　入社</p>
-    <p id="text1">インフラ整備を中心に活動中</p>
+    <div class="text1">インフラ整備を中心に活動中</div>
     </div>
     <div id="link">
         <h3>link</h3>
-        <p id="text2">work</p>
-        <p id="text3">E-mail</p>
+        <div class="text2">Work</p>
+        <div class="text3">Email</p>
     </div>
 
 </body>
