@@ -42,12 +42,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        transition: 1s;
+        opacity: 0;
         width: 100%;
         height: 640px;
         position: relative;
         margin: 0;
         border: 0;
         padding: 0;
+        }
+        .fedeIn.animated{
+            opacity: 1; 
         }
     h2{
         font-family: 'Sacramento', cursive;
@@ -74,12 +79,17 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        transition: 1s;
+        opacity: 0;
         width: 100%;
         height: 640px;
         position: relative;
         margin: 0;
         border: 0;
         padding: 0;
+    }
+    .fedeIn.animation{
+        opacity: 1;
     }
     h3{
         font-family: 'Sacramento', cursive;
@@ -111,7 +121,7 @@
     <p>フォース株式会社　
     <br>インフラエンジニア</p>
     </div>
-    <div id="about">
+    <div class="box fedeIn"id="about">
     <h2>about</h2>
     <p>伊藤　香月
     <br>令和2年
@@ -120,10 +130,30 @@
     <br>フォース株式会社　入社</p>
     <div class="text1">インフラ整備を中心に活動中</div>
     </div>
-    <div id="link">
+    <div class="box fedeIn" id="link">
         <h3>link</h3>
         <div class="text2">Work</p>
         <div class="text3">Email</p>
     </div>
+<script>
+    'use script'
 
+    $(window).on('load scroll', function (){
+
+var box = $('.fadeIn');
+var animated = 'animated';
+
+box.each(function(){
+
+  var boxOffset = $(this).offset().top;
+  var scrollPos = $(window).scrollTop();
+  var wh = $(window).height();
+
+  if(scrollPos > boxOffset - wh + 100 ){
+    $(this).addClass(animated);
+  }
+});
+
+});
+</script>
 </body>
