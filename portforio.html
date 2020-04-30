@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>ポートフォリオ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <style type="text/css">
+body
+{background-attachment: fixed;
+background-color: rgb(195, 194, 194);}
     div#top{
         background-image : url("img/imgcoffee.jpeg");
         background-size: cover;
@@ -43,7 +48,6 @@
         background-repeat: no-repeat;
         background-position: center;
         transition: 1s;
-        opacity: 0;
         width: 100%;
         height: 640px;
         position: relative;
@@ -80,7 +84,6 @@
         background-repeat: no-repeat;
         background-position: center;
         transition: 1s;
-        opacity: 0;
         width: 100%;
         height: 640px;
         position: relative;
@@ -103,6 +106,7 @@
         font-size: 3rem;
         margin-left: 35%;
         margin-top: 0;
+        color: black;
     }
     div.text3{
         display: inline-block;
@@ -111,7 +115,13 @@
         margin-left: 35%;
         padding: 0;
         margin: 0;
-    }
+        }
+    a.ather{text-decoration: none;
+    }    
+    a:link{color: black;}
+    a:visited{color: black;}
+    a:hover{color: darkslateblue;}
+    a:active{color: black;}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 </head>
@@ -121,7 +131,7 @@
     <p>フォース株式会社　
     <br>インフラエンジニア</p>
     </div>
-    <div class="box fedeIn"id="about">
+    <div class="scroll-fade"id="about">
     <h2>about</h2>
     <p>伊藤　香月
     <br>令和2年
@@ -130,30 +140,37 @@
     <br>フォース株式会社　入社</p>
     <div class="text1">インフラ整備を中心に活動中</div>
     </div>
-    <div class="box fedeIn" id="link">
+    <div class="scroll-fade" id="link">
         <h3>link</h3>
-        <div class="text2">Work</p>
-        <div class="text3">Email</p>
+        <div class="text2"><p><a href="jamp"class="ather">Work</a></p>
+        <div class="text3"><p><a href="jamp"class="ather">Email</a></p>
     </div>
 <script>
     'use script'
 
-    $(window).on('load scroll', function (){
-
-var box = $('.fadeIn');
-var animated = 'animated';
-
-box.each(function(){
-
-  var boxOffset = $(this).offset().top;
-  var scrollPos = $(window).scrollTop();
-  var wh = $(window).height();
-
-  if(scrollPos > boxOffset - wh + 100 ){
-    $(this).addClass(animated);
-  }
+    $(function(){
+var effect_pos=800;
+var effect_move=50;
+var effect_time= 1500;
+$('.scroll-fade').css({
+        opacity: 1,
+        transform: 'translateY('+ effect_move +'px)',
+        transition: effect_time + 'ms'
+    });
 });
-
-});
+$(window).on('scroll load', function(){
+        var scroll_top = $(this).scrollTop();
+        var scroll_btm = scroll_top + $(this).height();
+        effect_pos = scroll_btm - effect_pos;
+        $('.scroll-fade').each( function() {
+            var this_pos = $(this).offset().top;
+            if ( effect_pos > this_pos ) {
+                $(this).css({
+                    opacity: 1,
+                    transform: 'translateY(1)'
+                });
+            }
+        });
+    });
 </script>
 </body>
